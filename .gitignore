@@ -1,0 +1,52 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Python runtime and tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+.coverage
+htmlcov/
+
+# Local databases and runtime state
+*.sqlite3
+*.db
+*.db-journal
+
+# Frontend dependencies and output
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Voice data and model artifacts
+sample_audio/*
+!sample_audio/README.md
+*.wav
+*.mp3
+*.m4a
+*.webm
+*.ckpt
+*.onnx
+*.pt
+*.pth
+*.safetensors
+
+# Local learning and scaffolding context
+scaffolding-prompt.txt
+LEARNING.md
+LEARNING_NOTES*.md
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+

@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap");
+
+:root { font-family: "DM Sans", sans-serif; color: #1f2b27; background: #f6f2e9; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: radial-gradient(circle at 80% 12%, #e1eee5 0, transparent 28%), #f6f2e9; }
+button, textarea, input { font: inherit; }
+button { cursor: pointer; }
+main { max-width: 1180px; margin: auto; padding: 0 38px; }
+nav { height: 92px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #d9d5cb; }
+.brand { color: #17382e; text-decoration: none; font-weight: 600; font-size: 20px; letter-spacing: -.5px; display: flex; align-items: center; gap: 10px; }
+.brandMark { width: 31px; height: 31px; display: grid; place-items: center; border-radius: 50% 50% 45% 55%; background: #17382e; color: #f6f2e9; font-family: "DM Serif Display"; font-style: italic; }
+.sessionPill { border: 1px solid #cbc7bd; padding: 9px 15px; border-radius: 99px; font-size: 12px; text-transform: uppercase; letter-spacing: 1.2px; }
+.hero { padding: 88px 0 72px; max-width: 780px; }
+.eyebrow { display: flex; align-items: center; gap: 9px; color: #5e756d; text-transform: uppercase; letter-spacing: 1.8px; font-size: 11px; font-weight: 600; }
+.eyebrow span { display: inline-block; width: 26px; height: 1px; background: #d06743; }
+.hero h1 { margin: 20px 0 18px; font: 400 clamp(58px, 8vw, 100px)/.87 "DM Serif Display", serif; letter-spacing: -4px; }
+.hero h1 em { color: #c75f3d; font-weight: 400; }
+.hero p { max-width: 510px; color: #64706c; font-size: 18px; line-height: 1.6; }
+.practiceGrid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 18px; }
+.practiceCard, .recordCard { min-height: 330px; border-radius: 26px; padding: 32px; position: relative; overflow: hidden; }
+.practiceCard { background: #fffdf8; border: 1px solid #e2ded4; }
+.recordCard { background: #193c31; color: #f8f3e9; display: grid; place-items: center; transition: background .25s ease; }
+.recordCard.isRecording { background: #a94f36; }
+.step { position: absolute; top: 30px; right: 32px; color: #939b97; font: italic 20px "DM Serif Display"; }
+.step.light { color: #b9cbc5; }
+.cardHeader small, .coachNote small { color: #c05c3f; text-transform: uppercase; font-size: 10px; letter-spacing: 1.5px; }
+.cardHeader h2 { margin: 5px 0 38px; font: 30px "DM Serif Display"; }
+textarea { border: 0; resize: none; outline: none; background: transparent; width: 88%; min-height: 110px; color: #1f2b27; font: 36px/1.3 "DM Serif Display"; }
+.phraseMeta { border-top: 1px solid #e4e0d7; padding-top: 18px; display: flex; justify-content: space-between; color: #88908c; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+.recordButton { border: 0; background: none; color: inherit; display: flex; flex-direction: column; align-items: center; gap: 7px; z-index: 1; }
+.recordButton strong { font: 27px "DM Serif Display"; }
+.recordButton small { color: #b9cbc5; }
+.micIcon { width: 78px; height: 78px; border-radius: 50%; background: #f4c76d; color: #193c31; display: grid; place-items: center; margin-bottom: 10px; box-shadow: 0 0 0 10px #ffffff12; }
+.wave { position: absolute; bottom: 28px; display: flex; align-items: center; gap: 5px; height: 55px; opacity: .22; }
+.wave i { display: block; width: 3px; border-radius: 4px; background: #d9ebe5; }
+.analysisPanel { margin: 18px 0 76px; padding: 22px 24px; border: 1px solid #ded9cf; border-radius: 20px; background: #eee9de; display: flex; align-items: end; gap: 24px; }
+.analysisPanel > div { flex: 1; }
+.analysisPanel label { display: block; text-transform: uppercase; letter-spacing: 1.2px; font-size: 10px; color: #68756f; margin-bottom: 8px; }
+.analysisPanel input { width: 100%; border: 0; border-bottom: 1px solid #bcb8af; outline: none; background: transparent; padding: 7px 0; color: #263b34; }
+.analysisPanel small { color: #8b8d86; display: block; margin-top: 7px; }
+.analyzeButton { min-width: 220px; border: 0; border-radius: 13px; background: #c9603f; color: white; padding: 17px 20px; display: flex; justify-content: space-between; font-weight: 600; }
+.analyzeButton:disabled { opacity: .55; cursor: wait; }
+.error { background: #f7d9cf; color: #8d351f; padding: 15px 18px; border-radius: 12px; }
+.results { border-top: 1px solid #d6d1c6; padding: 72px 0; display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; }
+.resultIntro h2 { font: 50px/1 "DM Serif Display"; margin: 20px 0; }
+.resultIntro p { color: #738079; line-height: 1.6; }
+.feedbackList { display: flex; flex-direction: column; gap: 10px; }
+.feedback { display: grid; grid-template-columns: 60px 1fr auto; align-items: center; gap: 18px; padding: 18px; border-radius: 16px; background: #fffdf8; border: 1px solid #e2ded4; }
+.feedback.good { display: block; color: #356b59; }
+.phoneme { width: 54px; height: 54px; display: grid; place-items: center; border-radius: 14px; background: #f1ded4; color: #aa4f35; font: 20px "DM Serif Display"; }
+.feedback p { margin: 5px 0 0; color: #737c78; font-size: 13px; }
+.confidence { font-size: 11px; color: #84908b; }
+.coachNote { grid-column: 2; background: #dfe9df; padding: 23px; border-radius: 16px; }
+.coachNote p { font: 21px "DM Serif Display"; margin: 7px 0; }
+.coachNote span { color: #6c7c75; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+footer { min-height: 120px; border-top: 1px solid #d6d1c6; display: flex; align-items: center; justify-content: space-between; color: #78827d; font-size: 12px; }
+footer span { color: #17382e; font-weight: 600; }
+@media (max-width: 760px) {
+  main { padding: 0 20px; }
+  .hero { padding: 62px 0 50px; }
+  .hero h1 { letter-spacing: -2px; }
+  .practiceGrid, .results { grid-template-columns: 1fr; }
+  .analysisPanel { align-items: stretch; flex-direction: column; }
+  .analyzeButton { width: 100%; }
+  .coachNote { grid-column: 1; }
+  textarea { font-size: 29px; }
+}
+

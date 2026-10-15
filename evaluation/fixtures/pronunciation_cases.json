@@ -1,0 +1,24 @@
+[
+  {
+    "id": "clean_remote_phrase",
+    "expected_text": "I really like working remotely.",
+    "observed_text": "I really like working remotely.",
+    "labels": []
+  },
+  {
+    "id": "initial_r_to_l",
+    "expected_text": "red road",
+    "observed_text": "led load",
+    "labels": [
+      {"phoneme": "R", "kind": "substitution"},
+      {"phoneme": "R", "kind": "substitution"}
+    ]
+  },
+  {
+    "id": "omitted_final_t",
+    "expected_text": "right",
+    "observed_text": "rye",
+    "labels": [{"phoneme": "T", "kind": "omission"}]
+  }
+]
+

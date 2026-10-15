@@ -1,0 +1,40 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: speechmate
+      POSTGRES_USER: speechmate
+      POSTGRES_PASSWORD: speechmate
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U speechmate"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    volumes:
+      - speechmate-data:/var/lib/postgresql/data
+
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      DATABASE_URL: postgresql+psycopg://speechmate:speechmate@db:5432/speechmate
+      ASR_PROVIDER: deterministic
+      ALLOWED_ORIGINS: http://localhost:5173
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+
+  web:
+    build: frontend
+    environment:
+      VITE_API_URL: http://localhost:8000
+    depends_on:
+      - api
+    ports:
+      - "5173:5173"
+
+volumes:
+  speechmate-data:
